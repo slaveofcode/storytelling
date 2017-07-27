@@ -1,0 +1,31 @@
+{
+  "name": "storytelling",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/slaveofcode/storytelling.git"
+  },
+  "keywords": [
+    "storytelling",
+    "animation",
+    "javascript",
+    "paperjs"
+  ],
+  "author": "Aditya Kresna Permana",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/slaveofcode/storytelling/issues"
+  },
+  "homepage": "https://github.com/slaveofcode/storytelling#readme",
+  "devDependencies": {
+    "webpack": "^3.4.1"
+  },
+  "dependencies": {
+    "paper": "^0.11.4"
+  }
+}
