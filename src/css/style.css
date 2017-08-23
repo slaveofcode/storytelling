@@ -1,0 +1,13 @@
+@font-face {
+  font-family: 'Planewalker';
+  src: url('../fonts/planewalker/Planewalker.eot'); /* IE9 Compat Modes */
+  src: url('../fonts/planewalker/Planewalker.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/planewalker/Planewalker.woff') format('woff'), /* Pretty Modern Browsers */
+       url('../fonts/planewalker/Planewalker.ttf')  format('truetype'); /* Safari, Android, iOS */
+}
+
+.head {
+  color: #00FF44;
+  font-family: 'Planewalker';
+  font-size: 36px;
+}

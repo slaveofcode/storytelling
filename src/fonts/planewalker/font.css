@@ -1,0 +1,11 @@
+@font-face {
+	font-family: 'Planewalker';
+	src: url('./Planewalker.eot');
+	src: local('Planewalker'), url('./Planewalker.woff') format('woff'), url('./Planewalker.ttf') format('truetype');
+}
+/* use this class to attach this font to any element i.e. <p class="fontsforweb_fontid_70660">Text with this font applied</p> */
+.fontsforweb_fontid_70660 {
+	font-family: 'Planewalker' !important;
+}
+
+/* Font downloaded from FontsForWeb.com */
