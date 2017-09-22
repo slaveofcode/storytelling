@@ -6,7 +6,7 @@ const webpack = require('webpack')
 module.exports = {
   devtool: 'source-map', // not on production
   devServer: {
-    contentBase: './dist',
+    contentBase: './public',
     hot: true
   },
   entry: {
@@ -15,7 +15,7 @@ module.exports = {
   },
   output: {
     filename: '[name].bundle.js',
-    path: path.resolve(__dirname, 'dist')
+    path: path.resolve(__dirname, 'public/javascripts')
   },
   module: {
     rules: [

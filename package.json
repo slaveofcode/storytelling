@@ -1,8 +1,26 @@
 {
   "name": "storytelling",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "private": true,
+  "homepage": "https://github.com/slaveofcode/storytelling#readme",
+  "repository": {		
+    "type": "git",		
+    "url": "git+https://github.com/slaveofcode/storytelling.git"		
+  },		
+  "keywords": [
+    "storytelling",		
+    "animation",		
+    "javascript"
+  ],
+  "author": "Aditya Kresna Permana",		
+  "license": "MIT",		
+  "bugs": {		
+    "url": "https://github.com/slaveofcode/storytelling/issues"		
+  },		 
   "scripts": {
+    "webpack-server:start": "webpack-dev-server --hotOnly",
+    "webpack-server:reload": "webpack-dev-server --open",
+    "webpack-server:build": "webpack --config webpack.config.js",
     "start": "node ./bin/www"
   },
   "dependencies": {
@@ -13,5 +31,14 @@
     "morgan": "~1.8.1",
     "pug": "~2.0.0-beta11",
     "serve-favicon": "~2.4.2"
+  },
+  "devDependencies": {
+    "clean-webpack-plugin": "^0.1.16",
+    "css-loader": "^0.28.7",
+    "file-loader": "^0.11.2",
+    "html-webpack-plugin": "^2.30.1",
+    "style-loader": "^0.18.2",
+    "webpack": "^3.6.0",
+    "webpack-dev-server": "^2.8.2"
   }
 }
