@@ -169,4 +169,6 @@ fabric.properties
 # Sonarlint plugin
 .idea/sonarlint
 
+public/vendors
+
 # End of https://www.gitignore.io/api/node,bower,webstorm,sublimetext,visualstudiocode

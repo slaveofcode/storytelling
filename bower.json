@@ -1,0 +1,23 @@
+{
+  "name": "storytelling",
+  "description": "",
+  "main": "",
+  "authors": [
+    "Aditya Kresna Permana"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "storytelling",
+    "animation",
+    "javascript"
+  ],
+  "homepage": "https://github.com/slaveofcode/storytelling",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

@@ -15,7 +15,7 @@ module.exports = {
   },
   output: {
     filename: '[name].bundle.js',
-    path: path.resolve(__dirname, 'public/javascripts')
+    path: path.resolve(__dirname, 'public/dist')
   },
   module: {
     rules: [
@@ -41,7 +41,7 @@ module.exports = {
     ]
   },
   plugins: [
-    new CleanWebpackPlugin(['dist']),
+    new CleanWebpackPlugin(['public/dist']),
     new HtmlWebpackPlugin({
       title: 'The Cool Output'
     }),
