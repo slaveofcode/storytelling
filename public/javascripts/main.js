@@ -27,10 +27,7 @@ var init = function() {
   normalizeScene();
 }
 
-$(document).ready(function() {
-  
-  init();
-
+var sceneOne = function() {
   var timeline = new TimelineMax();
   
   var tweenLogo = new TweenMax.to('#logo', 1.2, {
@@ -53,17 +50,24 @@ $(document).ready(function() {
   timeline.add(tween2);
   timeline.add(tween3);
   timeline.add(tween4);
-  
-  var ctrl = new ScrollMagic.Controller({
-    container: '#canvas'
-  });
-  
+
   var sceneOne = new ScrollMagic.Scene({
     triggerElement: '#scene-one'
   })
   .setTween(timeline);
+
+  return sceneOne;
+}
+
+$(document).ready(function() {
+  
+  init();
+
+  var ctrl = new ScrollMagic.Controller({
+    container: '#canvas'
+  });
   
   ctrl.addScene([
-    sceneOne
+    sceneOne()
   ]);
 });
