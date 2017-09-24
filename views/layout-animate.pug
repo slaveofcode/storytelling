@@ -1,9 +1,15 @@
 extends layout
 
 block css
-  link(href="/vendors/fullpage.js/dist/jquery.fullpage.min.css", rel="stylesheet")
+  //- link(href="/vendors/fullpage.js/dist/jquery.fullpage.min.css", rel="stylesheet")
   link(rel='stylesheet', href='/stylesheets/style.css')
 
 block js
   script(src='/vendors/jquery/dist/jquery.min.js')
-  script(src='/vendors/fullpage.js/dist/jquery.fullpage.min.js')
+  script(src='/vendors/gsap/src/minified/TimelineMax.min.js')
+  script(src='/vendors/gsap/src/minified/TweenMax.min.js')
+  script(src='/vendors/scrollmagic/scrollmagic/minified/ScrollMagic.min.js')
+  script(src='/vendors/scrollmagic/scrollmagic/minified/plugins/animation.gsap.min.js')
+  script(src='/vendors/scrollmagic/scrollmagic/minified/plugins/debug.addIndicators.min.js')
+  //- script(src='/vendors/fullpage.js/dist/jquery.fullpage.min.js')
+  script(src='javascripts/main.js')
