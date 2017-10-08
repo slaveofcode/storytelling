@@ -3,20 +3,20 @@
   "version": "1.0.0",
   "private": true,
   "homepage": "https://github.com/slaveofcode/storytelling#readme",
-  "repository": {		
-    "type": "git",		
-    "url": "git+https://github.com/slaveofcode/storytelling.git"		
-  },		
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/slaveofcode/storytelling.git"
+  },
   "keywords": [
-    "storytelling",		
-    "animation",		
+    "storytelling",
+    "animation",
     "javascript"
   ],
-  "author": "Aditya Kresna Permana",		
-  "license": "MIT",		
-  "bugs": {		
-    "url": "https://github.com/slaveofcode/storytelling/issues"		
-  },		 
+  "author": "Aditya Kresna Permana",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/slaveofcode/storytelling/issues"
+  },
   "scripts": {
     "webpack-server:start": "webpack-dev-server --hotOnly",
     "webpack-server:reload": "webpack-dev-server --open",
