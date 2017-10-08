@@ -52,9 +52,9 @@ table {
 }
 #container {
   position: relative;
-  max-width: 1280px;
+  /* max-width: 1280px;
   margin-left: auto;
-  margin-right: auto;
+  margin-right: auto; */
 }
 .scene {
   position: relative;
@@ -73,13 +73,91 @@ table {
   -o-background-size: cover;
   background-size: cover;
 }
+/* Fonts */
+.font-always-in-my-heart {
+  font-family: 'Always In My Heart';
+  font-weight: 500;
+  font-style: normal;
+}
+
+.font-aday-in-autumn{
+  font-family: 'ADayInAutumn';
+  font-weight: 500;
+  font-style: normal;
+}
+
+.font-appleberry {
+  font-family: 'appleberry';
+  font-weight: normal;
+  font-style: normal;
+}
+
+.font-great-vibes {
+  font-family: 'Great Vibes';
+  font-weight: normal;
+  font-style: normal;
+}
+
+#scene-content .abs {
+  position: absolute;
+}
 
 /* Scene One */
-#logo {
-  width: 20vw;
-  background: #FFF;
-  height: 30vh;
-  margin-left: auto;
-  margin-right: auto;
-  border-radius: 20px;
+#scene-one h1.title {
+  font-size: 20vh;
+  color: #c00047;
+  left: 25%;
+  top: 30%;
+  background: rgba(255,255,255, 0.5);
+  padding: 20px;
+  padding-right: 90px;
+}
+
+#scene-one h2.subtitle {
+  opacity: 1;
+  font-size: 5vh;
+  color: #ffffff;
+  left: 45%;
+  top: -10%;
+  background: rgba(0,0,0, 0.8);
+  padding: 20px;
+  padding-right: 20px;
+  -webkit-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  transform: rotate(0deg);
+}
+
+@-webkit-keyframes animate-rotation {
+  0%   { 
+    -webkit-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  50%  {
+    -webkit-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    transform: rotate(90deg);
+  }
+  100% {
+    -webkit-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    transform: rotate(180deg);
+  }
+}
+@keyframes animate-rotation {
+  0%   { 
+    -webkit-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  50%  {
+    -webkit-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    transform: rotate(90deg);
+  }
+  100% {
+    -webkit-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    transform: rotate(180deg);
+  }
 }
