@@ -162,3 +162,91 @@ table {
     transform: rotate(180deg);
   }
 }
+
+/** Components **/
+.sharp-leaf {
+  position: absolute;
+}
+.sharp-leaf.yellow {
+  background-image: url(../images/svg/compiled/o-sharp-leaf-1.svg);
+  background-repeat: no-repeat;
+}
+.sharp-leaf.yellow-single {
+  background-image: url(../images/svg/compiled/almost-yellow-leaf.svg);
+  background-repeat: no-repeat;
+}
+.sharp-leaf.yellow-tail {
+  background-image: url(../images/svg/compiled/o-sharp-leaf-2.svg);
+  background-repeat: no-repeat;
+}
+.sharp-leaf.red-tail {
+  background-image: url(../images/svg/compiled/o-sharp-leaf-3.svg);
+  background-repeat: no-repeat;
+}
+.sharp-leaf.orange {
+  background-image: url(../images/svg/compiled/orange-leaf-sharp.svg);
+  background-repeat: no-repeat;
+}
+
+.top-boundaries {
+  
+}
+
+.large {
+  width: 50vh;
+  height: 280px;
+  background-size: 50vh 280px;
+}
+.medium {
+  width: 25vh;
+  height: 178px;
+  background-size: 25vh 178px;
+}
+.small {
+  width: 20vh;
+  height: 120px;
+  background-size: 20vh 120px;
+}
+.tiny {
+  width: 10vh;
+  height: 60px;
+  background-size: 10vh 60px;
+}
+
+.rotate-10 {-webkit-transform: rotate(10deg);-ms-transform: rotate(10deg);transform: rotate(10deg);}
+.rotate-20 {-webkit-transform: rotate(20deg);-ms-transform: rotate(20deg);transform: rotate(20deg);}
+.rotate-30 {-webkit-transform: rotate(30deg);-ms-transform: rotate(30deg);transform: rotate(30deg);}
+.rotate-40 {-webkit-transform: rotate(40deg);-ms-transform: rotate(40deg);transform: rotate(40deg);}
+.rotate-50 {-webkit-transform: rotate(50deg);-ms-transform: rotate(50deg);transform: rotate(50deg);}
+.rotate-60 {-webkit-transform: rotate(60deg);-ms-transform: rotate(60deg);transform: rotate(60deg);}
+.rotate-70 {-webkit-transform: rotate(70deg);-ms-transform: rotate(70deg);transform: rotate(70deg);}
+.rotate-80 {-webkit-transform: rotate(80deg);-ms-transform: rotate(80deg);transform: rotate(80deg);}
+.rotate-90 {-webkit-transform: rotate(90deg);-ms-transform: rotate(90deg);transform: rotate(90deg);}
+.rotate-100 {-webkit-transform: rotate(100deg);-ms-transform: rotate(100deg);transform: rotate(100deg);}
+.rotate-110 {-webkit-transform: rotate(110deg);-ms-transform: rotate(110deg);transform: rotate(110deg);}
+.rotate-120 {-webkit-transform: rotate(120deg);-ms-transform: rotate(120deg);transform: rotate(120deg);}
+.rotate-130 {-webkit-transform: rotate(130deg);-ms-transform: rotate(130deg);transform: rotate(130deg);}
+.rotate-140 {-webkit-transform: rotate(140deg);-ms-transform: rotate(140deg);transform: rotate(140deg);}
+.rotate-150 {-webkit-transform: rotate(150deg);-ms-transform: rotate(150deg);transform: rotate(150deg);}
+.rotate-160 {-webkit-transform: rotate(160deg);-ms-transform: rotate(160deg);transform: rotate(160deg);}
+.rotate-170 {-webkit-transform: rotate(170deg);-ms-transform: rotate(170deg);transform: rotate(170deg);}
+.rotate-180 {-webkit-transform: rotate(180deg);-ms-transform: rotate(180deg);transform: rotate(180deg);}
+.rotate-190 {-webkit-transform: rotate(190deg);-ms-transform: rotate(190deg);transform: rotate(190deg);}
+.rotate-200 {-webkit-transform: rotate(200deg);-ms-transform: rotate(200deg);transform: rotate(200deg);}
+.rotate-210 {-webkit-transform: rotate(210deg);-ms-transform: rotate(210deg);transform: rotate(210deg);}
+.rotate-220 {-webkit-transform: rotate(220deg);-ms-transform: rotate(220deg);transform: rotate(220deg);}
+.rotate-230 {-webkit-transform: rotate(230deg);-ms-transform: rotate(230deg);transform: rotate(230deg);}
+.rotate-240 {-webkit-transform: rotate(240deg);-ms-transform: rotate(240deg);transform: rotate(240deg);}
+.rotate-250 {-webkit-transform: rotate(250deg);-ms-transform: rotate(250deg);transform: rotate(250deg);}
+.rotate-260 {-webkit-transform: rotate(260deg);-ms-transform: rotate(260deg);transform: rotate(260deg);}
+.rotate-270 {-webkit-transform: rotate(270deg);-ms-transform: rotate(270deg);transform: rotate(270deg);}
+.rotate-280 {-webkit-transform: rotate(280deg);-ms-transform: rotate(280deg);transform: rotate(280deg);}
+.rotate-290 {-webkit-transform: rotate(290deg);-ms-transform: rotate(290deg);transform: rotate(290deg);}
+.rotate-300 {-webkit-transform: rotate(300deg);-ms-transform: rotate(300deg);transform: rotate(300deg);}
+.rotate-310 {-webkit-transform: rotate(310deg);-ms-transform: rotate(310deg);transform: rotate(310deg);}
+.rotate-320 {-webkit-transform: rotate(320deg);-ms-transform: rotate(320deg);transform: rotate(320deg);}
+.rotate-330 {-webkit-transform: rotate(330deg);-ms-transform: rotate(330deg);transform: rotate(330deg);}
+.rotate-340 {-webkit-transform: rotate(340deg);-ms-transform: rotate(340deg);transform: rotate(340deg);}
+.rotate-350 {-webkit-transform: rotate(350deg);-ms-transform: rotate(350deg);transform: rotate(350deg);}
+.rotate-360 {-webkit-transform: rotate(360deg);-ms-transform: rotate(360deg);transform: rotate(360deg);}
+/** End Components **/
