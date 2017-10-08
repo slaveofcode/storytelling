@@ -1,4 +1,4 @@
-var S;
+var S, Backsound;
 var makeElFullScreen = function(selector) {
   var vpHeight = $(window).height();
   $(selector).height(vpHeight);
@@ -22,8 +22,24 @@ var init = function() {
   makeWeddingBackgroundFull();
 }
 
+
+
 $(document).ready(function() {
   
   init();
 
+  var sound = new Howl({
+    src: ['sound/birdy.webm', 'sound/birdy.mp3'],
+    autoplay: false,
+    loop: false,
+    volume: 1,
+  });
+
+  $(document).on('scroll', function() {
+    if (!Backsound) {
+      sound.play();
+      Backsound = sound;
+    }
+  })
+  
 });

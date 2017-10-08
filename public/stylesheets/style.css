@@ -52,6 +52,7 @@ table {
 }
 #container {
   position: relative;
+  overflow-x: hidden;
   /* max-width: 1280px;
   margin-left: auto;
   margin-right: auto; */
@@ -60,7 +61,7 @@ table {
   position: relative;
   padding-top: 1px;
   margin-top: -1px;
-  background-color: #eeeeee;
+  background-color: #cabba6;
   border-bottom: 1px solid #dddddd; 
 }
 .component {
