@@ -22,47 +22,8 @@ var init = function() {
   makeWeddingBackgroundFull();
 }
 
-// var sceneOne = function() {
-//   var timeline = new TimelineMax();
-  
-//   var tweenLogo = new TweenMax.to('#logo', 1.2, {
-//     marginTop: '10vh'
-//   });
-  
-//   var tween2 = new TweenMax.to('#text-welcome', 1.2, {
-//     marginLeft: '20vh'
-//   });
-  
-//   var tween3 = new TweenMax.to('#text-subtitle', 1.2, {
-//     marginRight: '10vh'
-//   });
-  
-//   var tween4 = new TweenMax.to('#menu-bar', 1.2, {
-//     marginTop: 0
-//   });
-  
-//   timeline.add(tweenLogo);
-//   timeline.add(tween2);
-//   timeline.add(tween3);
-//   timeline.add(tween4);
-
-//   var sceneOne = new ScrollMagic.Scene({
-//     triggerElement: '#scene-one'
-//   })
-//   .setTween(timeline);
-
-//   return sceneOne;
-// }
-
 $(document).ready(function() {
   
   init();
 
-//   var ctrl = new ScrollMagic.Controller({
-//     container: '#canvas'
-//   });
-  
-//   ctrl.addScene([
-//     sceneOne()
-//   ]);
 });
