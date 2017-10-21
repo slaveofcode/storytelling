@@ -1,22 +1,54 @@
 #scene-one.scene
-  #wedding-background.parallax-background
-  #scene-content
-    h1.abs.title.font-always-in-my-heart(
-      data-0="opacity: 1; top: 30%; left: 19%;",
-      data-50="opacity: 1; top: 30%; left: 19%;",
-      data-70="opacity: 0.8; top: 30%; left: 15%;",
-      data-80="opacity: 0.8; top: 30%; left: 5%;",
-      data-90="opacity: 0.7; top: 30%; left: 0%;",
-      data-100="opacity: 0.6; top: 30%; left: -10%;",
-      data-600="opacity: 0.5; top: 50%; left: -65%;"
-    )
-      | Amelia & Aditya
-    h2.abs.subtitle.font-aday-in-autumn(
-      data-0="top: 50%; left: 55%;-webkit-transform: rotate(-7.5deg);-ms-transform: rotate(-7.5deg);transform: rotate(-7.5deg);",
-      data-50="top: 50%; left: 55%;-webkit-transform: rotate(-7.5deg);-ms-transform: rotate(-7.5deg);transform: rotate(-7.5deg);",
-      data-70="top: 20%; left: 65%;-webkit-transform: rotate(90deg);-ms-transform: rotate(90deg);transform: rotate(90deg);",
-      data-80="top: 15%; left: 70%;-webkit-transform: rotate(120deg);-ms-transform: rotate(120deg);transform: rotate(120deg);",
-      data-120="top: 10%; left: 75%;-webkit-transform: rotate(180deg);-ms-transform: rotate(180deg);transform: rotate(180deg);",
-      data-170="top: 5%; left: 85%;-webkit-transform: rotate(240deg);-ms-transform: rotate(240deg);transform: rotate(240deg);",
-    )
-      | A little story of us
+  #wedding-background.parallax-background.fix(
+    data-1000="top:0%",
+    data-4500="top:0%",
+    data-7000="top:-100%;"
+  )
+  h1.fix.title.font-always-in-my-heart(
+    data-1000="opacity: 1; top: 37%; left: 20vw;",
+    data-7000="top:-100%;"
+  )
+    | Amelia & Aditya
+  .fix.sharp-leaf.medium.orange.rotate-170(
+    data-1000="top: -6%;left:-5%;opacity:1",
+    data-7000="top: -6%;left:-5%;transform: rotate(170deg)",
+    data-8200="top: 11%;left:-2%;transform: rotate(200deg)",
+    data-9400="top: 12%;left:4%;transform: rotate(280deg)",
+    data-11800="top: 35%;left:5%;transform: rotate(480deg)",
+    data-12400="top: 75%;left:8%;transform: rotate(680deg)",
+    data-13000="top: 100%;left:10%;transform: rotate(750deg);opacity:1")
+  .fix.sharp-leaf.medium.yellow.rotate-250(
+    data-1000="top: 63%;left:-3%;",
+    data-7000="top: 63%;left:-3%;transform:rotate(250deg)",
+    data-12400="top: 100%;left:3%;transform:rotate(0deg)")
+  .fix.sharp-leaf.medium.red-tail.rotate-200(
+    data-1000="top: 11%;left:-4%",
+    data-7000="top: 11%;left:-4%;transform:rotate(200deg)",
+    data-9300="top: 69%;left:3%;transform:rotate(360deg)",
+    data-11200="top: 100%;left:5%;transform:rotate(460deg)")
+  .fix.sharp-leaf.medium.yellow-tail.rotate-0(
+    data-1000="top: 30%;left:-3%",
+    data-7965="top: 30%;left:-3%;transform:rotate(0deg)",
+    data-11000="top: 35%;left:1%;transform:rotate(90deg)",
+    data-12000="top: 40%;left:2%;transform:rotate(180deg)",
+    data-13650="top: 100%;left:5%;transform:rotate(450deg)",)
+  .fix.sharp-leaf.medium.orange.rotate-90(
+    data-1000="top: 45%;left:-3%",
+    data-8500="top: 45%;left:-3%;transform:rotate(90deg)",
+    data-12000="top: 100%;left:3%;transform:rotate(-360deg)",)
+  .fix.sharp-leaf.tiny.yellow-tail(
+    data-1000="top: 26%;left:-1%",)
+  .fix.sharp-leaf.tiny.red-tail(
+    data-1000="top: 74%;left:-2%;transform:rotate(-90deg)",)
+  .fix.sharp-leaf.large.yellow-tail.rotate-0(
+    data-1000="top: 74%;left:-6%;transform:rotate(-87deg)",)
+    
+  //- h2.abs.subtitle.font-aday-in-autumn(
+  //-   data-0="top: 60%; left: 40vw;-webkit-transform: rotate(0deg);-ms-transform: rotate(0deg);transform: rotate(0deg);",
+  //-   data-450="top: 68vw; left: 68vw;-webkit-transform: rotate(-7.5deg);-ms-transform: rotate(-7.5deg);transform: rotate(-7.5deg);",
+  //-   data-470="top: 20%; left: 65%;-webkit-transform: rotate(90deg);-ms-transform: rotate(90deg);transform: rotate(90deg);",
+  //-   data-480="top: 15%; left: 70%;-webkit-transform: rotate(120deg);-ms-transform: rotate(120deg);transform: rotate(120deg);",
+  //-   data-520="top: 10%; left: 75%;-webkit-transform: rotate(180deg);-ms-transform: rotate(180deg);transform: rotate(180deg);",
+  //-   data-570="top: 5%; left: 85%;-webkit-transform: rotate(240deg);-ms-transform: rotate(240deg);transform: rotate(240deg);",
+  //- )
+  //-   | A little story of us
