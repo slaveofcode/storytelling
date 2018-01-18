@@ -1,0 +1,17 @@
+version: '3.4'
+
+services:
+  storytelling-postgres-db:
+    image: postgres:9.4
+    environment:
+      - PGDATA=/var/lib/postgresql/data
+      - POSTGRES_DB=storytelling
+      - POSTGRES_USER=codeslave
+      - POSTGRES_PASSWORD=codeslave
+
+  storytelling-app:
+    image: storytelling:v1.0.3
+    command: ./node_modules/.bin/knex migrate:latest
+    command: nodemon
+    links:
+      - storytelling-postgres-db

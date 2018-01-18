@@ -1,0 +1,14 @@
+version: '3.4'
+
+services:
+  storytelling-postgres-db:
+    volumes:
+      - "./pgdata:/var/lib/postgresql/data"
+
+  storytelling-app:
+    build: .
+    restart: always
+    ports:
+      - 1831:3000
+    volumes:
+      - "./:/usr/src/app"
