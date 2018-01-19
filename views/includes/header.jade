@@ -1,23 +1,55 @@
-.container
-  ul.list-inline
-    li
-      a(href='/') Home
-    li
-      a(href='/contact') Contact
-    ul.list-inline
-      if user
-        li
-          if user.picture
-            img.avatar(src=user.picture)
-          else
-            img.avatar(src=user.gravatar)
-          | <span> #{user.name || user.email || user.id} </span>
-        li
-          a(href='/account') My Account
-        li
-          a(href='/logout') Logout
-      else
-        li
-          a(href='/login') Log in
-        li
-          a(href='/signup') Sign up
+
+header#masthead.site-header
+  .container
+    .row
+      .col-xs-12
+        nav.navbar.navbar-default
+          .navbar-header
+            button.navbar-toggle(type='button', data-toggle='collapse', data-target='.navbar-collapse')
+              span.sr-only Toggle navigation
+              span.icon-bar
+              span.icon-bar
+              span.icon-bar
+            .header-logo
+              p.site-title
+                a(href='/', rel='home') Amelia &amp; Aditya
+          .collapse.navbar-collapse
+            ul.nav.navbar-nav.navbar-right
+              li
+                a(title='Story', href='/#wedding-bio') About Us
+              li
+                a(title='Story', href='/#story') Story
+              li
+                a(title='Story', href='/#special-events') Ceremony
+              li
+                a(title='Story', href='/#gallery') Gallery
+              li
+                a(title='Story', href='/#gifts') Gifts
+              li
+                a(title='Story', href='/#rsvp') RSVP
+              li
+                a(title='Story', href='archive.html') Blog
+
+//- .container
+//-   ul.list-inline
+//-     li
+//-       a(href='/') Home
+//-     li
+//-       a(href='/contact') Contact
+//-     ul.list-inline
+//-       if user
+//-         li
+//-           if user.picture
+//-             img.avatar(src=user.picture)
+//-           else
+//-             img.avatar(src=user.gravatar)
+//-           | <span> #{user.name || user.email || user.id} </span>
+//-         li
+//-           a(href='/account') My Account
+//-         li
+//-           a(href='/logout') Logout
+//-       else
+//-         li
+//-           a(href='/login') Log in
+//-         li
+//-           a(href='/signup') Sign up

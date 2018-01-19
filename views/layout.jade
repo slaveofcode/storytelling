@@ -5,15 +5,48 @@ html
     meta(http-equiv='x-ua-compatible', content='ie=edge')
     meta(name='viewport', content='width=device-width, initial-scale=1')
     title= title
-    link(rel='stylesheet', href='/css/normalize.css')
-    link(rel='stylesheet', href='/css/flexboxgrid.css')
-    link(rel='stylesheet', href='/css/main.css')
+    link(rel='shortcut icon', href='/icon/favicon2.ico', type='image/x-icon')
+    link(rel='icon', href='/icon/favicon2.ico', type='image/x-icon')
+    
+    block preloads
+      link(rel='preload', href='/vendor/bootstrap/dist/css/bootstrap.min.css', as='style')
+      link(rel='preload', href='https://fonts.googleapis.com/css?family=Great+Vibes', as='style', crossorigin='anonymous')
+      link(rel='preload', href='https://fonts.googleapis.com/css?family=Lato', as='style', crossorigin='anonymous')
+      link(rel='preload', href='/vendor/font-awesome/fonts/fontawesome-webfont.eot', as='font', type='application/vnd.ms-fontobject', crossorigin='anonymous')
+      link(rel='preload', href='/vendor/font-awesome/fonts/fontawesome-webfont.woff2', as='font', type='font/woff2', crossorigin='anonymous')
+      link(rel='preload', href='/vendor/font-awesome/fonts/fontawesome-webfont.woff', as='font', type='font/woff', crossorigin='anonymous')
+      link(rel='preload', href='/vendor/font-awesome/fonts/fontawesome-webfont.ttf', as='font', type='font/ttf', crossorigin='anonymous')
+      link(rel='preload', href='/vendor/font-awesome/fonts/fontawesome-webfont.svg', as='font', type='image/svg+xml', crossorigin='anonymous')
+      link(rel='preload', href='/vendor/jquery/dist/jquery.min.js', as='script')
+      link(rel='preload', href='/vendor/bootstrap/dist/js/bootstrap.min.js', as='script')
+      link(rel='preload', href='/vendor/imagesloaded/imagesloaded.pkgd.min.js', as='script')
+      link(rel='preload', href='/vendor/waypoints/lib/jquery.waypoints.min.js', as='script')
+      link(rel='preload', href='/vendor/matchHeight/dist/jquery.matchHeight-min.js', as='script')
+      link(rel='preload', href='/js/cross-browser.js', as='script')
+
+    block styles
+      link(rel='stylesheet', href='/vendor/bootstrap/dist/css/bootstrap.min.css', type='text/css')
+      link(rel='stylesheet', href='/vendor/font-awesome/css/font-awesome.min.css', type='text/css')
+      link(href='https://fonts.googleapis.com/css?family=Great+Vibes', rel='stylesheet', type='text/css')
+      link(href='https://fonts.googleapis.com/css?family=Lato', rel='stylesheet', type='text/css')
+
   body
     include includes/header
     block content
     include includes/footer
 
-    script(src='/js/main.js')
+    block scripts
+      script(src='/vendor/jquery/dist/jquery.min.js')
+      script(src='/vendor/bootstrap/dist/js/bootstrap.min.js')
+      script(src='/vendor/imagesloaded/imagesloaded.pkgd.min.js')
+      script(src='/vendor/waypoints/lib/jquery.waypoints.min.js')
+      script(src='/vendor/matchHeight/dist/jquery.matchHeight-min.js')
+      script(src='/js/cross-browser.js')
+      script(src='/js/main.js')
+
+    //if lt IE 9
+      script(src='/vendor/html5shiv/dist/html5shiv.min.js')
+      script(src='/vendor/respond/dest/respond.min.js')
 
     // Google Analytics: change UA-XXXXX-X to be your site's ID.
     script.

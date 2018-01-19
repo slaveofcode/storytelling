@@ -10,7 +10,7 @@ services:
       - POSTGRES_PASSWORD=codeslave
 
   storytelling-app:
-    image: storytelling:v1.0.3
+    image: storytelling:v1.1.0
     command: ./node_modules/.bin/knex migrate:latest
     command: nodemon
     links:

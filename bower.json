@@ -1,0 +1,31 @@
+{
+  "name": "storytelling",
+  "description": "Wedding site",
+  "main": "",
+  "authors": [
+    "Aditya <zeandcode@gmail.com>"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/slaveofcode/storytelling",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^4.0.0",
+    "owl.carousel": "owl-carousel2#^2.2.1",
+    "font-awesome": "^4.7.0",
+    "simplelightbox": "^1.12.0",
+    "jquery": "^3.2.1",
+    "jquery-validation": "^1.17.0",
+    "imagesloaded": "^4.1.4",
+    "waypoints": "^4.0.1",
+    "matchHeight": "^0.7.2",
+    "html5shiv": "^3.7.3",
+    "respond": "Respond#^1.4.2"
+  }
+}

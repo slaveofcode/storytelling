@@ -1,30 +1,26 @@
 extends layout
 
-block content
-  .container
-    if messages.error
-      div.text-danger(role='alert')
-        for error in messages.error
-          div= error.msg
-    if messages.success
-      div.text-success(role='alert')
-        for success in messages.success
-          div= success.msg
-    if messages.info
-      div.text-info(role='alert')
-        for info in messages.info
-          div= info.msg
+append preloads
+  link(rel='preload', href='/vendor/owl.carousel/dist/assets/owl.carousel.min.css', as='style')
+  link(rel='preload', href='/vendor/owl.carousel/dist/assets/owl.theme.default.min.css', as='style')
+  link(rel='preload', href='/vendor/simplelightbox/dist/simplelightbox.min.css', as='style')
+  link(rel='preload', href='/css/animate.css', as='style')
+  link(rel='preload', href='/css/main.css', as='style')
+  link(rel='preload', href='/vendor/jquery/dist/jquery.validate.min.js', as='script')
+  link(rel='preload', href='/vendor/owl.carousel/dist/owl.carousel.min.js', as='script')
+  link(rel='preload', href='/vendor/simplelightbox/dist/simplelightbox.min.js', as='script')
 
-    .row
-      .col-sm
-        h3 Heading 123 778
-        p Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
-        a(href='#', role='button') View details
-      .col-sm
-        h3 Heading
-        p Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
-        a(href='#', role='button') View details
-      .col-sm
-        h3 Heading
-        p Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
-        a(href='#', role='button') View details
+append styles
+  link(href='/vendor/owl.carousel/dist/assets/owl.carousel.min.css', rel='stylesheet')
+  link(href='/vendor/owl.carousel/dist/assets/owl.theme.default.min.css', rel='stylesheet')
+  link(href='/vendor/simplelightbox/dist/simplelightbox.min.css', rel='stylesheet')
+  link(href='/css/animate.css', rel='stylesheet')
+  link(href='/css/main.css', rel='stylesheet')
+
+append scripts
+  script(src='/vendor/jquery-validation/dist/jquery.validate.min.js')
+  script(src='/vendor/owl.carousel/dist/owl.carousel.min.js')
+  script(src='/vendor/simplelightbox/dist/simple-lightbox.min.js')
+
+block content
+  include ./includes/loader
