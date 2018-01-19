@@ -21,6 +21,23 @@ append scripts
   script(src='/vendor/jquery-validation/dist/jquery.validate.min.js')
   script(src='/vendor/owl.carousel/dist/owl.carousel.min.js')
   script(src='/vendor/simplelightbox/dist/simple-lightbox.min.js')
-
+ 
 block content
   include ./includes/loader
+  #content.site-content
+    #primary
+      include ./includes/home/slideshow
+      include ./includes/home/bio
+      include ./includes/home/testimonials
+      include ./includes/home/ourstory
+      include ./includes/home/events
+      include ./includes/home/gallery
+      include ./includes/home/gifts
+      include ./includes/home/blog
+      include ./includes/home/rsvp
+      
+  include ./includes/scrolltop-button
+  
+  include ./includes/form/sending
+  include ./includes/form/success
+  include ./includes/form/success
