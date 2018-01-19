@@ -16,7 +16,7 @@
     "tests"
   ],
   "dependencies": {
-    "bootstrap": "^4.0.0",
+    "bootstrap": "3.3.7",
     "owl.carousel": "owl-carousel2#^2.2.1",
     "font-awesome": "^4.7.0",
     "simplelightbox": "^1.12.0",
@@ -27,5 +27,8 @@
     "matchHeight": "^0.7.2",
     "html5shiv": "^3.7.3",
     "respond": "Respond#^1.4.2"
+  },
+  "resolutions": {
+    "bootstrap": "3.3.7"
   }
 }
