@@ -5,17 +5,16 @@ append preloads
   link(rel='preload', href='/vendor/owl.carousel/dist/assets/owl.theme.default.min.css', as='style')
   link(rel='preload', href='/vendor/simplelightbox/dist/simplelightbox.min.css', as='style')
   link(rel='preload', href='/css/animate.css', as='style')
-  link(rel='preload', href='/css/main.css', as='style')
-  link(rel='preload', href='/vendor/jquery/dist/jquery.validate.min.js', as='script')
+  link(rel='preload', href='/vendor/jquery-validation/dist/jquery.validate.min.js', as='script')
   link(rel='preload', href='/vendor/owl.carousel/dist/owl.carousel.min.js', as='script')
-  link(rel='preload', href='/vendor/simplelightbox/dist/simplelightbox.min.js', as='script')
+  link(rel='preload', href='/vendor/simplelightbox/dist/simple-lightbox.min.js', as='script')
 
 append styles
   link(href='/vendor/owl.carousel/dist/assets/owl.carousel.min.css', rel='stylesheet')
   link(href='/vendor/owl.carousel/dist/assets/owl.theme.default.min.css', rel='stylesheet')
   link(href='/vendor/simplelightbox/dist/simplelightbox.min.css', rel='stylesheet')
   link(href='/css/animate.css', rel='stylesheet')
-  link(href='/css/main.css', rel='stylesheet')
+  
 
 append scripts
   script(src='/vendor/jquery-validation/dist/jquery.validate.min.js')
@@ -32,7 +31,7 @@ block content
       include ./includes/home/ourstory
       include ./includes/home/events
       include ./includes/home/gallery
-      include ./includes/home/gifts
+      //- include ./includes/home/gifts
       include ./includes/home/blog
       include ./includes/home/rsvp
       

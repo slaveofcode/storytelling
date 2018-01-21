@@ -38,7 +38,7 @@
   });
 
   //Begin - Document Ready
-  $(document).on("ready", function() {
+  $(document).ready(function() {
     //WAYPOINTS
     $("#content").waypoint(
       function(direction) {
@@ -123,6 +123,9 @@
       $(".slide-icon").addClass("active");
       $(".slide-text").addClass("active");
       $(".featured-slide .primary-btn").addClass("active");
+      $(".main-carousel")
+        .removeClass("owl-loading")
+        .addClass("owl-loaded");
     });
 
     mainSlider.owlCarousel({
@@ -145,21 +148,6 @@
       $(".slide-text").addClass("active");
       $(".featured-slide .primary-btn").addClass("active");
       return false;
-    });
-
-    //=====>  Countdown (Edit this with your own date)  <====
-    $("#bearr-countdown-item").countdown("2017/02/22 15:10:56", function(
-      event
-    ) {
-      var $this = $(this).html(
-        event.strftime(
-          "" +
-            '<div class="countdown-col"><span class="countdown-time"> %-D </span> <span class="countdown-type"> Days </span></div> ' +
-            '<div class="countdown-col"><span class="countdown-time"> %H </span> <span class="countdown-type">Hours </span></div>' +
-            '<div class="countdown-col"><span class="countdown-time"> %M </span> <span class="countdown-type">Minutes </span></div>' +
-            '<div class="countdown-col"><span class="countdown-time"> %S </span> <span class="countdown-type">Seconds </span></div>'
-        )
-      );
     });
 
     //Testimonials

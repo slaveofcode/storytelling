@@ -1403,7 +1403,7 @@ a:focus {
   padding-bottom: 8px;
 }
 #masthead.header-stick {
-  background-color: #d75a4a;
+  background-color: #F06560;
   opacity: 0.9;
   -webkit-transition: all 0.4s ease-in-out;
   -moz-transition: all 0.4s ease-in-out;
@@ -1505,7 +1505,7 @@ a:focus {
 }
 @media (min-width:992px) {
   .navbar-default .navbar-nav > li > a {
-    margin-left: 50px;
+    margin-left: 10px;
     font-size: 14px;
     line-height: 20px;
     padding: 10px 5px;
@@ -1519,15 +1519,19 @@ a:focus {
   display: none;
 }
 @media (min-width:992px) {
+  /* .navbar-default {
+    position: relative;
+  }
   .navbar-default .navbar-nav > li:before {
-    content: "";
-    background: url(../img/nav-heart.png) no-repeat;
+    color: #FFFFFF;
+    content: "\f1db";
+    font-family: FontAwesome;
     position: absolute;
-    left: 13px;
-    top: 13px;
+    left: 19px;
+    top: 10px;
     width: 17px;
     height: 15px;
-  }
+  } */
 }
 .navbar-default .navbar-nav .dropdown li,
 .navbar-default .navbar-nav .dropdown a {

@@ -12,3 +12,4 @@ services:
       - 1831:3000
     volumes:
       - "./:/usr/src/app"
+    command: nodemon -e "js,jade,css"
