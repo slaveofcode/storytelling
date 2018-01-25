@@ -45,9 +45,11 @@
         if (direction === "down") {
           $("#masthead").addClass("header-stick");
           $("#back-to-top").removeClass("back-to-top-hide");
+          $("#music-control").addClass("with-back-top");
         } else {
           $("#masthead").removeClass("header-stick");
           $("#back-to-top").addClass("back-to-top-hide");
+          $("#music-control").removeClass("with-back-top");
         }
       },
       {
@@ -254,6 +256,26 @@
 
     modalWrap.on("click", function() {
       hideModal();
+    });
+
+    var sound = new Howl({
+      src: ["sound/halo.webm", "sound/halo.mp3"],
+      autoplay: false,
+      loop: true,
+      volume: 1
+    });
+
+    $("#music-control").on("click", function() {
+      console.log($(this).hasClass("unplayed"));
+      if ($(this).hasClass("unplayed")) {
+        sound.play();
+        $(this).removeClass("unplayed");
+        $(this).addClass("played");
+      } else {
+        sound.pause();
+        $(this).removeClass("played");
+        $(this).addClass("unplayed");
+      }
     });
     //End - Document Ready
   });

@@ -8,6 +8,7 @@ append preloads
   link(rel='preload', href='/vendor/jquery-validation/dist/jquery.validate.min.js', as='script')
   link(rel='preload', href='/vendor/owl.carousel/dist/owl.carousel.min.js', as='script')
   link(rel='preload', href='/vendor/simplelightbox/dist/simple-lightbox.min.js', as='script')
+  link(rel='preload', href='/vendor/howler.js/dist/howler.core.min.js', as='script')
 
 append styles
   link(href='/vendor/owl.carousel/dist/assets/owl.carousel.min.css', rel='stylesheet')
@@ -20,6 +21,7 @@ append scripts
   script(src='/vendor/jquery-validation/dist/jquery.validate.min.js')
   script(src='/vendor/owl.carousel/dist/owl.carousel.min.js')
   script(src='/vendor/simplelightbox/dist/simple-lightbox.min.js')
+  script(src='/vendor/howler.js/dist/howler.core.min.js')
  
 block content
   include ./includes/loader
@@ -34,7 +36,8 @@ block content
       //- include ./includes/home/gifts
       include ./includes/home/blog
       include ./includes/home/rsvp
-      
+
+  include ./includes/music-button    
   include ./includes/scrolltop-button
   
   include ./includes/form/sending

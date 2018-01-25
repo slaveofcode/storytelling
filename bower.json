@@ -26,7 +26,8 @@
     "waypoints": "^4.0.1",
     "matchHeight": "^0.7.2",
     "html5shiv": "^3.7.3",
-    "respond": "Respond#^1.4.2"
+    "respond": "Respond#^1.4.2",
+    "howler.js": "howler#^2.0.8"
   },
   "resolutions": {
     "bootstrap": "3.3.7"
