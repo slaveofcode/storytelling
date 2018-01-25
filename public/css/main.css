@@ -1107,6 +1107,12 @@ a:focus {
   -moz-transform: translateY(0px);
   opacity: 1;
 }
+#music-control {
+  background: #90a0ab;
+}
+#music-control.played {
+  background: #d75a4a !important;
+}
 #music-control.with-back-top {
   right: 60px;
 }
@@ -1348,7 +1354,7 @@ a:focus {
   transition: all 0.5s ease-in-out;
 }
 #masthead .header-logo {
-  width: 170px;
+  width: 180px;
   display: block;
 }
 @media (min-width: 768px) {

@@ -262,11 +262,10 @@
       src: ["sound/halo.webm", "sound/halo.mp3"],
       autoplay: false,
       loop: true,
-      volume: 1
+      volume: 0.8
     });
 
     $("#music-control").on("click", function() {
-      console.log($(this).hasClass("unplayed"));
       if ($(this).hasClass("unplayed")) {
         sound.play();
         $(this).removeClass("unplayed");
