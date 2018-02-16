@@ -15,3 +15,5 @@ services:
     command: nodemon
     links:
       - storytelling-postgres-db
+    depends_on:
+      - storytelling-postgres-db
