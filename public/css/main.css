@@ -1,4 +1,6 @@
 @charset "utf-8";
+
+@import url('https://fonts.googleapis.com/css?family=Dancing+Script');
 /*------------------------------------------------------------------
 [Main Theme Styles]
 
@@ -540,8 +542,7 @@ object {
   font-weight: black;
 }
 .font3 {
-  font-family: 'Great Vibes', sans-serif;
-  font-family: 'Great Vibes', cursive;
+  font-family: 'Dancing Script', cursive;
 }
 .anima1 {
   -webkit-transition: all 0.2s ease-in-out;
@@ -837,6 +838,7 @@ img.aligncenter {
   max-width: 1200px;
   width: 100%;
 }
+
 #body-content {
   background: #ffffff;
 }
@@ -1030,6 +1032,10 @@ a:focus {
   margin-bottom: 20px;
   position: relative;
 }
+.title-section-wrapper {
+  max-width: 500px;
+  margin: 0 auto;
+}
 @media (min-width: 768px) {
   .title-section {
     font-size: 38px;
@@ -1038,7 +1044,7 @@ a:focus {
   }
   .title-section:before {
     content: "";
-    background-image: url(../img/title-section-bg.png);
+    background-image: url(../img/assets/section-divider.png);
     width: 244px;
     height: 31px;
     display: block;
@@ -1373,7 +1379,6 @@ a:focus {
   width: 100%;
   padding: 15px 0;
   z-index: 10;
-  background-color: rgba(208, 88, 73, 0.83);
   -webkit-transition: all 0.5s ease-in-out;
   -moz-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
@@ -1395,7 +1400,7 @@ a:focus {
 }
 #masthead .header-logo .site-title {
   margin-bottom: 0;
-  font-size: 36px;
+  font-size: 31px;
   line-height: 1;
   margin-top: 12px;
   font-weight: regular;
@@ -1404,8 +1409,7 @@ a:focus {
   -webkit-transition: all 0.4s ease-in-out;
   -moz-transition: all 0.4s ease-in-out;
   transition: all 0.4s ease-in-out;
-  font-family: 'Great Vibes', sans-serif;
-  font-family: 'Great Vibes', cursive;
+  font-family: 'Dancing Script', cursive;
   color: #ffffff;
 }
 @media (min-width:992px) {
@@ -1437,7 +1441,7 @@ a:focus {
   padding-bottom: 8px;
 }
 #masthead.header-stick {
-  background-color: #F06560;
+  background-color: #d45043;
   opacity: 0.9;
   -webkit-transition: all 0.4s ease-in-out;
   -moz-transition: all 0.4s ease-in-out;
@@ -1804,22 +1808,22 @@ a:focus {
   }
 }
 .main-carousel .slide-inner {
-  width: 100%;
+  width: 70%;
   padding: 0 15px;
   max-width: 1200px;
   margin: 0 auto;
 }
 .main-carousel .slide-title {
-  font-family: 'Great Vibes', sans-serif;
-  font-family: 'Great Vibes', cursive;
+  font-family: 'Dancing Script', cursive;
   font-size: 60px;
   color: #ffffff;
   position: relative;
   margin-bottom: 30px;
+  font-weight: normal;
 }
 @media (min-width: 768px) {
   .main-carousel .slide-title {
-    font-size: 80px;
+    font-size: 65px;
   }
   .main-carousel .slide-title:before,
   .main-carousel .slide-title:after {
@@ -1863,6 +1867,15 @@ a:focus {
   transition: all 0.3s ease-in-out;
   padding-top: 15px;
 }
+@media (max-width: 768px) {
+  .main-carousel .slide-title {
+    display: none;
+  }
+  .navbar-collapse.in {
+    background: rgba(212, 80, 67, .9);
+    border-radius: 5px;
+  }
+}
 @media (min-width: 768px) {
   .main-carousel .owl-buttons div.owl-prev,
   .main-carousel .owl-buttons div.owl-next {
@@ -1891,14 +1904,12 @@ a:focus {
   .main-carousel .owl-buttons .owl-prev {
     left: 50px;
   }
-}
-.main-carousel .owl-buttons .owl-next {
-  right: 0;
-}
-@media (min-width: 1200px) {
   .main-carousel .owl-buttons .owl-next {
     right: 50px;
   }
+}
+.main-carousel .owl-buttons .owl-next {
+  right: 0;
 }
 .main-carousel .owl-controls {
   margin: 0;
@@ -1994,7 +2005,7 @@ a:focus {
     width: 654px;
     height: 79px;
     max-width: 100%;
-    background: url('../img/hearts-arrow.png');
+    background: url('../img/assets/section-flower.png');
     margin: 0 auto;
     margin-bottom: 5px;
   }

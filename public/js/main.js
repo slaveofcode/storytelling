@@ -24,7 +24,7 @@
   $(window).on("load", function() {
     //loader and Intro Animations
     $("#page-loader")
-      .delay(3000)
+      .delay(2000)
       .fadeOut(400, function() {});
 
     // Calling functions here
