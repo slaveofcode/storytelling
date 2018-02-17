@@ -2003,11 +2003,12 @@ a:focus {
     content: '';
     display: block;
     width: 654px;
-    height: 79px;
+    height: 84px;
     max-width: 100%;
-    background: url('../img/assets/section-flower.png');
+    background: url('../img/assets/floral-section.png') no-repeat;
     margin: 0 auto;
     margin-bottom: 5px;
+    background-size: 654px auto;
   }
   .wedding-bio-wrapper:after {
     content: '';
