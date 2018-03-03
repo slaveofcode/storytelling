@@ -226,7 +226,7 @@
               $("#contactError")
                 .fadeIn(300)
                 .addClass("modal-show");
-              $("#contactSuccess").addClass("hidden");
+              // $("#contactSuccess").addClass("hidden");
             }
           },
           beforeSend: function() {
