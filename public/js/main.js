@@ -257,10 +257,10 @@
     });
 
     var sound = new Howl({
-      src: ["sound/halo.webm", "sound/halo.mp3"],
+      src: ["sound/perfect.webm", "sound/perfect.mp3"],
       autoplay: false,
       loop: true,
-      volume: 0.8
+      volume: 0.7
     });
 
     $("#music-control").on("click", function() {
