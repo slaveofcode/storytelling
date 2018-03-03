@@ -13,3 +13,4 @@ RUN npm i -g nodemon
 CMD ["nodemon", "start"]
 
 expose 1831
+expose 3000
