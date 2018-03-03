@@ -204,12 +204,10 @@
       submitHandler: function(form) {
         $.ajax({
           type: "POST",
-          url: "php/contact-form.php",
+          url: "/rsvp",
           data: {
             name: $("#contactForm #name").val(),
             email: $("#contactForm #email").val(),
-            events: $("#contactForm #events").val(),
-            guests: $("#contactForm #guests").val(),
             message: $("#contactForm #message").val()
           },
           dataType: "json",

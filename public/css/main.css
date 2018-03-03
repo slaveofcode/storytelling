@@ -1013,17 +1013,18 @@ a:focus {
 .section.with-dark-bg .title-section {
   color: #ffffff;
 }
-.section.with-dark-bg .title-section:before {
+/* .section.with-dark-bg .title-section:before {
   background-image: url(../img/heart-leaves-line.png);
   width: 451px;
   height: 83px;
-}
+} */
 .section.with-dark-bg .text-section {
   color: #ffffff;
 }
 .title-section {
   font-family: 'Lato', sans-serif;
-  font-weight: black;
+  font-weight: normal;
+  color: #48786D;
   letter-spacing: 3px;
   text-align: center;
   text-transform: uppercase;
@@ -1441,12 +1442,18 @@ a:focus {
   padding-bottom: 8px;
 }
 #masthead.header-stick {
-  background-color: #d45043;
+  background-color: #ffffff;
+  border-bottom: 1px solid #ededed;
   opacity: 0.9;
   -webkit-transition: all 0.4s ease-in-out;
   -moz-transition: all 0.4s ease-in-out;
   transition: all 0.4s ease-in-out;
 }
+
+#masthead.header-stick .site-title a {
+  color: #d75a4a !important;
+}
+
 @media (min-width: 768px) {
   #masthead.header-stick {
     padding: 3px 0;
@@ -1498,7 +1505,7 @@ a:focus {
   margin-right: 0;
 }
 .navbar-default .navbar-toggle .icon-bar {
-  background-color: #ffffff;
+  background-color: #d75a4a;
 }
 .navbar-default .navbar-nav {
   border: 0;
@@ -1513,6 +1520,9 @@ a:focus {
   -moz-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
   color: #ffffff !important;
+}
+#masthead.header-stick .navbar-default .navbar-nav a {
+  color: #d75a4a !important;
 }
 .navbar-default .navbar-nav a:hover {
   color: #ffffff !important;
@@ -1530,7 +1540,7 @@ a:focus {
   font-weight: black;
   display: block;
   text-transform: uppercase;
-  font-size: 13px;
+  font-size: 16px;
   line-height: 24px;
   color: #ffffff;
   text-align: center;
@@ -1539,7 +1549,7 @@ a:focus {
 .navbar-default .navbar-nav > li > a:hover,
 .navbar-default .navbar-nav > li > a.active {
   color: #ffffff;
-  border-color: #d75a4a;
+  border-color: #ffffff;
 }
 @media (min-width:992px) {
   .navbar-default .navbar-nav > li > a {
@@ -1872,7 +1882,6 @@ a:focus {
     display: none;
   }
   .navbar-collapse.in {
-    background: rgba(212, 80, 67, .9);
     border-radius: 5px;
   }
 }
@@ -2010,7 +2019,7 @@ a:focus {
     margin-bottom: 5px;
     background-size: 654px auto;
   }
-  .wedding-bio-wrapper:after {
+  /* .wedding-bio-wrapper:after {
     content: '';
     display: block;
     width: 654px;
@@ -2020,10 +2029,9 @@ a:focus {
     margin: 0 auto;
     margin-top: 5px;
     margin-bottom: 20px;
-  }
+  } */
 }
 .wedding-bio-wrapper .wedding-bio-item {
-  background-color: #eeeeee;
   padding: 15px;
   margin: 30px 0;
   text-align: center;
@@ -2051,19 +2059,20 @@ a:focus {
   background-repeat: no-repeat;
 }
 .wedding-bio-wrapper .wedding-bio-item .wedding-bio-title span:before {
-  background: url(../img/pink-prop-left.png);
+  /* background: url(../img/pink-prop-left.png); */
   transform: translate(-48px, 0);
   -webkit-transform: translate(-48px, 0);
   -moz-transform: translate(-48px, 0);
 }
 .wedding-bio-wrapper .wedding-bio-item .wedding-bio-title span:after {
-  background: url(../img/pink-prop-right.png);
+  /* background: url(../img/pink-prop-right.png); */
   transform: translate(10px, 0);
   -webkit-transform: translate(10px, 0);
   -moz-transform: translate(10px, 0);
 }
 .wedding-bio-wrapper .wedding-bio-item .wedding-bio-content {
   padding: 0 30px 0;
+  margin-top: 20px;
 }
 @media (min-width:992px) {
   .wedding-bio-wrapper .wedding-bio-item .wedding-bio-content {
@@ -2081,20 +2090,20 @@ a:focus {
   line-height: 1.5;
   font-weight: normal;
 }
-.wedding-bio-item-bride {
+/* .wedding-bio-item-bride {
   -webkit-transition: all 0.35s ease-in-out;
   -moz-transition: all 0.35s ease-in-out;
   transition: all 0.35s ease-in-out;
   transform: translate(0, 0);
   -webkit-transform: translate(0, 0);
   -moz-transform: translate(0, 0);
-}
-.wedding-bio-item-bride:hover {
+} */
+/* .wedding-bio-item-bride:hover {
   transform: translate(10px, -10px);
   -webkit-transform: translate(10px, -10px);
   -moz-transform: translate(10px, -10px);
-}
-.wedding-bio-item-groom {
+} */
+/* .wedding-bio-item-groom {
   -webkit-transition: all 0.35s ease-in-out;
   -moz-transition: all 0.35s ease-in-out;
   transition: all 0.35s ease-in-out;
@@ -2106,7 +2115,7 @@ a:focus {
   transform: translate(-10px, -10px);
   -webkit-transform: translate(-10px, -10px);
   -moz-transform: translate(-10px, -10px);
-}
+} */
 /* ==========================================================
 ! 07. Section: Testimonials
 ========================================================== */
@@ -2191,7 +2200,7 @@ a:focus {
   -webkit-transform: translate(0, 0);
   -moz-transform: translate(0, 0);
   position: relative;
-  background-color: #eee;
+  /* background-color: #eee; */
   padding: 25px;
   margin: 20px 0 50px;
 }
@@ -2238,7 +2247,7 @@ a:focus {
     height: 54px;
     position: absolute;
   }
-  .story-item:before {
+  /* .story-item:before {
     background-image: url(../img/pink-prop-top-left.png);
     top: -35px;
     left: -44px;
@@ -2247,9 +2256,9 @@ a:focus {
     background-image: url(../img/pink-prop-bottom-right.png);
     bottom: -35px;
     right: -44px;
-  }
+  } */
 }
-.story-item-alt:before {
+/* .story-item-alt:before {
   background-image: url(../img/pink-prop-right.png);
   left: inherit;
   right: -44px;
@@ -2258,7 +2267,7 @@ a:focus {
   background-image: url(../img/pink-prop-bottom-left.png);
   right: inherit;
   left: -44px;
-}
+} */
 .story-date {
   display: flex;
   height: 100%;
@@ -2266,8 +2275,7 @@ a:focus {
   align-items: center;
 }
 .story-date .story-time {
-  background-color: #d75a4a;
-  color: #ffffff;
+  color: #48786D;
   font-size: 22px;
   line-height: 28px;
   padding: 10px;
@@ -2305,7 +2313,7 @@ a:focus {
     -o-transform: translate(0, -50%);
     position: absolute;
     top: 50%;
-    background-image: url(../img/story-heart-prop.png);
+    /* background-image: url(../img/story-heart-prop.png); */
     width: 71px;
     height: 71px;
   }
@@ -2335,7 +2343,7 @@ a:focus {
   transform: translate(0, 0);
   -webkit-transform: translate(0, 0);
   -moz-transform: translate(0, 0);
-  border: 3px solid #ffffff;
+  border: 1px solid #555555;
   margin-bottom: 10px;
 }
 .events-reminder-item:hover {
@@ -2344,10 +2352,11 @@ a:focus {
   -moz-transform: translate(0, -10px);
 }
 .events-reminder-item header {
-  background-color: #d75a4a;
+  /* background-color: #d75a4a; */
   padding: 15px 25px;
 }
 .events-reminder-item header .events-item-heading {
+  font-family: 'Lato', sans-serif;
   font-size: 24px;
   line-height: 1.2;
   font-weight: 900;
@@ -2381,7 +2390,7 @@ a:focus {
   line-height: 1.3;
   padding: 15px 0;
   color: #ffffff;
-  border-bottom: 3px solid #d75a4a;
+  border-bottom: 1px solid #555555;
 }
 .events-reminder-item .events-item-content ul li:last-child {
   border-bottom: none;
@@ -2879,7 +2888,7 @@ a:focus {
   border: 1px solid #ccc;
   height: 48px;
   background: none;
-  border: 2px solid #fff;
+  border: 1px solid #555555;
   color: #fff;
   margin-top: 8px;
   font-weight: 300;
@@ -2911,7 +2920,7 @@ a:focus {
   border: 0;
   background: #d75a4a;
   color: #ffffff;
-  font-weight: bold;
+  font-weight: normal;
   text-transform: uppercase;
   font-size: 20px;
   padding-top: 10px;
@@ -2969,19 +2978,17 @@ span.not-valid-tip {
   color: #111;
 }
 .modal-content .modal-title {
-  color: #111;
-  font-size: 22px;
+  color: #333333;
+  font-size: 15px;
   border-bottom: 1px solid #ccc;
-  margin-bottom: 5px;
-  font-weight: bold;
+  margin-bottom: 10px;
+  font-weight: normal;
+  padding-bottom: 10px;
 }
 .modal-content p {
   font-size: 14px;
   margin-bottom: 0;
   color: #111;
-}
-#contactError .modal-title {
-  color: #fff;
 }
 /* ==========================================================
 !  14. Posts

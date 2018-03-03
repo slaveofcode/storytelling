@@ -3,48 +3,45 @@
     // Section Title
     .title-section-wrapper
       // Title
-      h2.title-section Come and Celebrate With Us
+      h2.title-section UCAPAN 
       // /title
       // Text
       p.text-section
-        | Come and celebrate with us! Please complete the form below and confirm your presence
+        //- | Come and celebrate with us! Please complete the form below and confirm your presence
       // /text
     // /Section Title
     // Form
-    form#contactForm.form.row.rsvp
+    form#contactForm.form.row.rsvp(action="/rsvp", method="post")
       // Form Group
       .col-sm-6.form-group
-        label Name
-        |                         
+        label Nama             
         input#name.form-control.required(name='name', required='', type='text')
         // Form Group
       // Form Group
       // Form Group
       .col-sm-6.form-group
-        label Email
-        |                         
+        label Email    
         input#email.form-control.required(name='email', required='', type='email')
       // Form Group
       // Form Group
-      .col-sm-6.form-group
+      //- .col-sm-6.form-group
         label Which events are you attending?
         |                         
         input#events.form-control.required(name='events', required='', type='text')
       // Form Group
       // Form Group
-      .col-sm-6.form-group
+      //- .col-sm-6.form-group
         label How many guests are you bringing?
         |                         
         input#guests.form-control.required(name='guests', required='', type='text')
       // Form Group
       // Form Group
       .col-sm-12.form-group
-        label Additional Information
-        |                         
+        label Berikan Ucapanmu 
         textarea#message.form-control.required(name='message', required='')
       // Form Group
       // Form Group
       .col-sm-12.form-group
-        button.primary-btn.with-bg(type='submit') SUBMIT!
+        button.primary-btn.with-bg(type='submit') KIRIM
       // Form Group
     // /Form
