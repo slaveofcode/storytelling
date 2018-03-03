@@ -20,8 +20,10 @@ exports.rsvp = (req, res) => {
   var errors = req.validationErrors();
 
   if (errors) {
-    req.flash("error", errors);
-    return res.redirect("/");
+    res.json({
+      response: "unsuccess",
+      msg: errors
+    });
   }
 
   new Rsvp({
@@ -40,4 +42,20 @@ exports.rsvp = (req, res) => {
         response: "unsuccess"
       });
     });
+};
+
+exports.rsvp_list = async (req, res) => {
+  let { page } = req.query;
+
+  if (!page) page = 1;
+
+  const rsvps = await Rsvp()
+    .query({ where: { approved: true } })
+    .orderBy("-id")
+    .fetchPage({
+      pageSize: 25,
+      page
+    });
+
+  res.json(rsvps.toJSON());
 };

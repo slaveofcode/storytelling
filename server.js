@@ -50,6 +50,7 @@ app.use(express.static(path.join(__dirname, "public")));
 
 app.get("/", HomeController.index);
 app.post("/rsvp", HomeController.rsvp);
+app.get("/rsvp/list", HomeController.rsvp_list);
 // app.get('/contact', contactController.contactGet);
 // app.post('/contact', contactController.contactPost);
 // app.get('/account', userController.ensureAuthenticated, userController.accountGet);
