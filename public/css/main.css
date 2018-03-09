@@ -2358,6 +2358,7 @@ a:focus {
 }
 .story-item-img img {
   width: 100%;
+  max-width: 290px;
 }
 .story-text,
 .story-text p {
