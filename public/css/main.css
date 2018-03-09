@@ -1505,6 +1505,9 @@ a:focus {
   margin-right: 0;
 }
 .navbar-default .navbar-toggle .icon-bar {
+  background-color: #ffffff;
+}
+.header-stick .navbar-default .navbar-toggle .icon-bar {
   background-color: #d75a4a;
 }
 .navbar-default .navbar-nav {
@@ -1519,7 +1522,7 @@ a:focus {
   -webkit-transition: all 0.3s ease-in-out;
   -moz-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
-  color: #ffffff !important;
+  color: #333333 !important;
 }
 #masthead.header-stick .navbar-default .navbar-nav a {
   color: #d75a4a !important;
@@ -1805,10 +1808,11 @@ a:focus {
 .main-carousel .slide {
   color: #ffffff;
   text-align: center;
-  background-position: right center;
+  background-position: right bottom;
+  background-repeat: no-repeat;
   display: flex;
   width: 100%;
-  align-items: center;
+  align-items: flex-end;
   padding-top: 70px;
   padding-bottom: 30px;
 }
@@ -1862,6 +1866,7 @@ a:focus {
 .main-carousel .slide-text,
 .main-carousel .slide-text p {
   font-size: 22px;
+  color: #000000;
 }
 .main-carousel .owl-buttons div.owl-prev,
 .main-carousel .owl-buttons div.owl-next {
@@ -1878,11 +1883,39 @@ a:focus {
   padding-top: 15px;
 }
 @media (max-width: 768px) {
+  .main-carousel .slide {
+    background-position: 70% bottom;
+  }
   .main-carousel .slide-title {
     display: none;
   }
   .navbar-collapse.in {
     border-radius: 5px;
+  }
+  .site-header .navbar-default .navbar-nav {
+    background: #d75a4a;
+  }
+  .site-header.header-stick .navbar-default .navbar-nav {
+    background: none;
+  }
+  .navbar-default .navbar-nav > li > a {
+    color: #FFFFFF !important;
+  }
+  .main-carousel .slide-text {
+    margin-bottom: -20px;
+    font-size: 18px !important;
+  }
+  .story-item {
+    margin: 0 !important;
+  }
+  .story-item-title span {
+    font-weight: 300;
+    font-size: 16px;
+    margin-left: 10px;
+    color: #48786D;
+  }
+  .story-item .story-item-content {
+    padding: 30px 0 0 !important;
   }
 }
 @media (min-width: 768px) {
@@ -2007,7 +2040,7 @@ a:focus {
 /* ==========================================================
 ! 06. Section: Wedding Bio
 ========================================================== */
-@media (min-width:992px) {
+/* @media (min-width:992px) { */
   .wedding-bio-wrapper:before {
     content: '';
     display: block;
@@ -2030,7 +2063,7 @@ a:focus {
     margin-top: 5px;
     margin-bottom: 20px;
   } */
-}
+/* } */
 .wedding-bio-wrapper .wedding-bio-item {
   padding: 15px;
   margin: 30px 0;
@@ -2044,8 +2077,7 @@ a:focus {
 }
 .wedding-bio-wrapper .wedding-bio-item .wedding-bio-title span {
   display: block;
-  font-family: 'Lato', sans-serif;
-  font-weight: black;
+  font-family: 'Dancing Script', cursive;
   margin-bottom: 5px;
   position: relative;
 }

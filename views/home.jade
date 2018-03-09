@@ -35,7 +35,12 @@ block content
       //- include ./includes/home/gallery
       //- include ./includes/home/gifts
       //- include ./includes/home/blog
-      include ./includes/maps
+      #story.section.section-our-story
+        .container-fluid
+          .title-section-wrapper
+            h2.title-section MAPS
+          .row
+            include ./includes/maps
       include ./includes/home/rsvp
 
   include ./includes/music-button    

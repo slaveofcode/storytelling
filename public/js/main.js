@@ -152,52 +152,6 @@
       return false;
     });
 
-    //Testimonials
-    $(".testimonial-carousel").owlCarousel({
-      items: 1,
-      nav: false
-    });
-
-    // Gallery Fancybox
-    $(".bearr-gallery-item a").simpleLightbox();
-
-    //Git List
-    $(".clients-carousel").owlCarousel({
-      items: 3,
-      nav: false,
-      margin: 20
-    });
-
-    //Blogroll
-    $(".blogroll-carousel").owlCarousel({
-      items: 1,
-      nav: false,
-      margin: 20,
-      responsive: {
-        768: {
-          items: 2
-        },
-        1024: {
-          items: 3
-        }
-      }
-    });
-
-    //Post Format: Gallery
-    $(".gallery-featured-carousel").owlCarousel({
-      loop: true,
-      loop: true,
-      margin: 0,
-      nav: true,
-      items: 1,
-      afterAction: function(el) {
-        //remove class active
-        this.$owlItems.removeClass("active");
-        //add class active
-        this.$owlItems.eq(this.currentItem).addClass("active");
-      }
-    });
-
     //Contact Form
     //Form Validator and Ajax Sender
     $("#contactForm").validate({
@@ -218,9 +172,11 @@
                 .fadeIn(300)
                 .addClass("modal-show");
               //$("#contactError").addClass("hidden");
-              //$("#contactForm #name, #contactForm #email, #contactForm #events, #contactForm #guests, #contactForm #message")
-              //.val("")
-              //.blur();
+              $(
+                "#contactForm #name, #contactForm #email, #contactForm #message"
+              )
+                .val("")
+                .blur();
             } else {
               $("#contactWait").hide();
               $("#contactError")
@@ -257,10 +213,10 @@
     });
 
     var sound = new Howl({
-      src: ["sound/perfect.webm", "sound/perfect.mp3"],
-      autoplay: false,
+      src: ["sound/river.webm", "sound/river.mp3"],
+      autoplay: true,
       loop: true,
-      volume: 0.7
+      volume: 0.6
     });
 
     $("#music-control").on("click", function() {

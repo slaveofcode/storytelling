@@ -3,7 +3,7 @@
     // Section Title
     .title-section-wrapper
       // Title
-      h2.title-section UCAPAN 
+      h2.title-section YOUR BEST WORDS
       // /title
       // Text
       p.text-section
@@ -12,36 +12,14 @@
     // /Section Title
     // Form
     form#contactForm.form.row.rsvp(action="/rsvp", method="post")
-      // Form Group
       .col-sm-6.form-group
-        label Nama             
+        label Name     
         input#name.form-control.required(name='name', required='', type='text')
-        // Form Group
-      // Form Group
-      // Form Group
       .col-sm-6.form-group
         label Email    
         input#email.form-control.required(name='email', required='', type='email')
-      // Form Group
-      // Form Group
-      //- .col-sm-6.form-group
-        label Which events are you attending?
-        |                         
-        input#events.form-control.required(name='events', required='', type='text')
-      // Form Group
-      // Form Group
-      //- .col-sm-6.form-group
-        label How many guests are you bringing?
-        |                         
-        input#guests.form-control.required(name='guests', required='', type='text')
-      // Form Group
-      // Form Group
       .col-sm-12.form-group
-        label Berikan Ucapanmu 
+        label Your Best Words 
         textarea#message.form-control.required(name='message', required='')
-      // Form Group
-      // Form Group
       .col-sm-12.form-group
-        button.primary-btn.with-bg(type='submit') KIRIM
-      // Form Group
-    // /Form
+        button.primary-btn.with-bg(type='submit') SEND
