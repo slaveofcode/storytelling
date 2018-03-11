@@ -246,20 +246,21 @@
         dataType: "json",
         success: function(data) {
           if (data.success) {
-            $("#rsvp-list").removeClass("hidden");
-            $.each(data.data, function(i, r) {
-              var template = $("#rsvp-template")
-                .clone()
-                .html();
-              var obj = $(template);
-              console.log(r);
-              obj.find(".c-username").text(r.name);
-              obj.find(".c-date").text(r.created_at);
-              obj.find(".media-comment").html(r.words);
-              obj.find("img.media-object").attr("src", r.image);
-              $(".tab-content").append(obj.html());
-            });
-            $("#rsvp-list").removeClass("hidden");
+            if (data.data.length > 0) {
+              $("#rsvp-list").removeClass("hidden");
+              $.each(data.data, function(i, r) {
+                var template = $("#rsvp-template")
+                  .clone()
+                  .html();
+                var obj = $(template);
+                obj.find(".c-username").text(r.name);
+                obj.find(".c-date").text(r.created_at);
+                obj.find(".media-comment").html(r.words);
+                obj.find("img.media-object").attr("src", r.image);
+                $(".tab-content").append(obj.html());
+              });
+              $("#rsvp-list").removeClass("hidden");
+            }
           }
         }
       });
