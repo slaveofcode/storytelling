@@ -1,0 +1,47 @@
+extends layout
+
+block content
+  .container
+    br/
+    br/
+    br/
+    br/
+    br/
+    if messages.success
+      div.text-success
+        for success in messages.success
+          div= success.msg
+    if messages.error
+      div.text-danger
+        for error in messages.error
+          div= error.msg
+
+    h3 
+      | RSVP Detail &nbsp;&nbsp;
+      a.btn.btn-sm.btn-info(href="javascript:history.go(-1)") Back
+
+    .table-responsive
+      - var approved = (data.rsvp.approved ? 'Yes' : 'No')
+      table.table.table-striped
+        tr
+          th ID
+          td= data.rsvp.id
+        tr
+          th No
+          td= data.rsvp.name
+        tr
+          th Email
+          td= data.rsvp.email
+        tr
+          th Words
+          td!= data.rsvp.words.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/\n/g, '<br/>')
+        tr
+          th Approved
+          td= approved
+        tr
+          th Action
+          td 
+            form.pull-left(action=`/rsvp/approve/${data.rsvp.id}`, method='POST')
+              button.btn.btn-md.btn-success(type="submit") Approve
+            form.pull-left(action=`/rsvp/reject/${data.rsvp.id}`, method='POST')
+              button.btn.btn-md.btn-warning(type="submit", style="margin-left: 20px;") Reject
