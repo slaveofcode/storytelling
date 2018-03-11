@@ -1,14 +1,15 @@
-var express = require("express");
-var path = require("path");
-var logger = require("morgan");
-var compression = require("compression");
-var methodOverride = require("method-override");
-var session = require("express-session");
-var flash = require("express-flash");
-var bodyParser = require("body-parser");
-var expressValidator = require("express-validator");
-var dotenv = require("dotenv");
-var passport = require("passport");
+const express = require("express");
+const path = require("path");
+const logger = require("morgan");
+const compression = require("compression");
+const methodOverride = require("method-override");
+const session = require("express-session");
+const flash = require("express-flash");
+const bodyParser = require("body-parser");
+const expressValidator = require("express-validator");
+const dotenv = require("dotenv");
+const passport = require("passport");
+const basicAuth = require("express-basic-auth");
 
 // Load environment variables from .env file
 dotenv.load();
@@ -49,13 +50,22 @@ app.use(function(req, res, next) {
 });
 app.use(express.static(path.join(__dirname, "public")));
 
+const basicAuthChecker = () => {
+  return basicAuth({
+    users: { aditya: "bonotono" },
+    challenge: true,
+    realm: "KkiUgKFKYr65UE^$5(IOh"
+  });
+};
+
 app.get("/", HomeController.index);
 
-app.post("/rsvp", RsvpController.index);
-app.get("/rsvp/list", RsvpController.list);
-app.get("/rsvp/detail/:id", RsvpController.detail);
-app.post("/rsvp/approve/:id", RsvpController.approve);
-app.post("/rsvp/reject/:id", RsvpController.reject);
+app.post("/comment", RsvpController.index);
+app.get("/comment_list", RsvpController.listJSON);
+app.get("/rsvp/list", basicAuthChecker(), RsvpController.list);
+app.get("/rsvp/detail/:id", basicAuthChecker(), RsvpController.detail);
+app.post("/rsvp/approve/:id", basicAuthChecker(), RsvpController.approve);
+app.post("/rsvp/reject/:id", basicAuthChecker(), RsvpController.reject);
 // app.get('/contact', contactController.contactGet);
 // app.post('/contact', contactController.contactPost);
 // app.get('/account', userController.ensureAuthenticated, userController.accountGet);

@@ -2,7 +2,8 @@
 (function($) {
   "use strict";
 
-  var windowHeight = $(window).height();
+  var windowHeight = $(window).height(),
+    commentsLoaded = false;
 
   function adjustViewport() {
     windowHeight = $(window).height();
@@ -158,7 +159,7 @@
       submitHandler: function(form) {
         $.ajax({
           type: "POST",
-          url: "/rsvp",
+          url: "/comment",
           data: {
             name: $("#contactForm #name").val(),
             email: $("#contactForm #email").val(),
@@ -231,6 +232,38 @@
       }
     });
     //End - Document Ready
+  });
+
+  $(window).on("scroll", function() {
+    if (
+      $(window).scrollTop() + $(window).height() > $(document).height() - 100 &&
+      !commentsLoaded
+    ) {
+      commentsLoaded = true;
+      $.ajax({
+        type: "GET",
+        url: "/comment_list",
+        dataType: "json",
+        success: function(data) {
+          if (data.success) {
+            $("#rsvp-list").removeClass("hidden");
+            $.each(data.data, function(i, r) {
+              var template = $("#rsvp-template")
+                .clone()
+                .html();
+              var obj = $(template);
+              console.log(r);
+              obj.find(".c-username").text(r.name);
+              obj.find(".c-date").text(r.created_at);
+              obj.find(".media-comment").html(r.words);
+              obj.find("img.media-object").attr("src", r.image);
+              $(".tab-content").append(obj.html());
+            });
+            $("#rsvp-list").removeClass("hidden");
+          }
+        }
+      });
+    }
   });
 
   //End - Use Strict mode

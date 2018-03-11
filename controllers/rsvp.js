@@ -1,3 +1,5 @@
+const crypto = require("crypto");
+const moment = require("moment");
 const Rsvp = require("../models/Rsvp");
 
 exports.index = (req, res) => {
@@ -59,6 +61,46 @@ exports.list = async (req, res) => {
     });
   } catch (err) {
     res.send(err.message);
+  }
+};
+
+exports.listJSON = async (req, res) => {
+  let { page } = req.query;
+
+  if (!page) page = 1;
+  page = parseInt(page);
+
+  try {
+    let rsvp_list = [];
+    const rsvps = await Rsvp.query(q => {
+      q.where("approved", "=", true);
+      q.orderBy("id", "desc");
+    }).fetchAll({
+      columns: ["id", "name", "email", "words", "created_at"]
+    });
+
+    if (rsvps) {
+      rsvp_list = rsvps.toJSON().map(rsvp => {
+        const gravatarHash = crypto
+          .createHash("md5")
+          .update(rsvp.email.toLowerCase())
+          .digest("hex");
+        rsvp.image = `https://www.gravatar.com/avatar/${gravatarHash}?s=100&d=mm`;
+        rsvp.created_at = moment(rsvp.created_at).format("ddd Do MMM, hA");
+        rsvp.words = rsvp.words.replace(/\s/g, "<br/>");
+        return rsvp;
+      });
+    }
+
+    res.json({
+      success: true,
+      data: rsvp_list
+    });
+  } catch (err) {
+    res.json({
+      success: false,
+      problem: err.message
+    });
   }
 };
 
