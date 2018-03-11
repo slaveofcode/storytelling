@@ -1,0 +1,37 @@
+extends layout
+
+block content
+  .container
+    br/
+    br/
+    br/
+    br/
+    br/
+    h3 
+      | RSVP List &nbsp;&nbsp;
+      a.btn.btn-sm.btn-info(href="javascript:location.reload()") Reload
+    .table-responsive
+      table.table.table-striped
+        thead
+          tr
+            th No
+            th Name
+            th Email
+            th Submitted On
+            th Approved
+        tbody
+          - each row in data.rsvps
+            - var approved = (row.approved == true ? '<span class="label label-success">Yes</span>' : '<span class="label label-danger">No</span>')
+            tr
+              td= row.id
+              td 
+                a(href=`/rsvp/detail/${row.id}`)= row.name
+              td= row.email
+              td= row.created_at
+              td!= approved
+    nav
+      ul.pager
+        li
+          a(href=`/rsvp/list?page=${data.prev_page}`) Previous
+        li
+          a(href=`/rsvp/list?page=${data.next_page}`) Next

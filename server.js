@@ -17,6 +17,7 @@ dotenv.load();
 var HomeController = require("./controllers/home");
 var userController = require("./controllers/user");
 var contactController = require("./controllers/contact");
+var RsvpController = require("./controllers/rsvp");
 
 // Passport OAuth strategies
 require("./config/passport");
@@ -49,8 +50,12 @@ app.use(function(req, res, next) {
 app.use(express.static(path.join(__dirname, "public")));
 
 app.get("/", HomeController.index);
-app.post("/rsvp", HomeController.rsvp);
-app.get("/rsvp/list", HomeController.rsvp_list);
+
+app.post("/rsvp", RsvpController.index);
+app.get("/rsvp/list", RsvpController.list);
+app.get("/rsvp/detail/:id", RsvpController.detail);
+app.post("/rsvp/approve/:id", RsvpController.approve);
+app.post("/rsvp/reject/:id", RsvpController.reject);
 // app.get('/contact', contactController.contactGet);
 // app.post('/contact', contactController.contactPost);
 // app.get('/account', userController.ensureAuthenticated, userController.accountGet);
