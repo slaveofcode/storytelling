@@ -393,6 +393,10 @@ a:active {
 /*--------------------------------------------------------------
 ## Posts and pages
 --------------------------------------------------------------*/
+.wedding-bio-image {
+  max-width: 310px;
+  margin: 0 auto;
+}
 .sticky {
   display: block;
 }
@@ -1883,6 +1887,15 @@ a:focus {
   padding-top: 15px;
 }
 @media (max-width: 768px) {
+  .wedding-bio-image {
+    max-width: 100%;
+    margin: 0 auto;
+  }
+  .media-date li {
+    font-size: 12px;
+    position: relative;
+    top: -30px;
+  }
   .main-carousel .slide {
     background-position: 70% bottom;
   }

@@ -1,6 +1,14 @@
 const crypto = require("crypto");
 const moment = require("moment");
 const Rsvp = require("../models/Rsvp");
+const nodemailer = require("nodemailer");
+const transporter = nodemailer.createTransport({
+  service: "Mailgun",
+  auth: {
+    user: process.env.MAILGUN_USERNAME,
+    pass: process.env.MAILGUN_PASSWORD
+  }
+});
 
 exports.index = (req, res) => {
   req.assert("name", "Nama tidak boleh kosong").notEmpty();
@@ -24,7 +32,23 @@ exports.index = (req, res) => {
     words: req.body.message
   })
     .save()
-    .then(function(user) {
+    .then(function(rsvp) {
+      const mailOptions = {
+        from: process.env.MAIL_FROM,
+        to: process.env.MAIL_TO,
+        subject: "New Message Submitted",
+        text: `
+          New message was submitted!
+
+          Let's check into http://adityameliawedding.com/rsvp/detail/${rsvp.id}
+
+          name: ${rsvp.name}
+          email: ${rsvp.email}
+          words: ${rsvp.words}
+        `
+      };
+      transporter.sendMail(mailOptions);
+
       res.json({
         response: "success"
       });
@@ -47,7 +71,7 @@ exports.list = async (req, res) => {
       q.orderBy("id", "desc");
     }).fetchPage({
       columns: ["id", "name", "email", "approved", "created_at"],
-      pageSize: 100,
+      pageSize: 50,
       page
     });
 
@@ -75,8 +99,10 @@ exports.listJSON = async (req, res) => {
     const rsvps = await Rsvp.query(q => {
       q.where("approved", "=", true);
       q.orderBy("id", "desc");
-    }).fetchAll({
-      columns: ["id", "name", "email", "words", "created_at"]
+    }).fetchPage({
+      columns: ["id", "name", "email", "words", "created_at"],
+      pageSize: 25,
+      page
     });
 
     if (rsvps) {

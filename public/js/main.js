@@ -3,7 +3,8 @@
   "use strict";
 
   var windowHeight = $(window).height(),
-    commentsLoaded = false;
+    commentsLoaded = false,
+    commentPage = 1;
 
   function adjustViewport() {
     windowHeight = $(window).height();
@@ -26,7 +27,12 @@
     //loader and Intro Animations
     $("#page-loader")
       .delay(2000)
-      .fadeOut(400, function() {});
+      .fadeOut(400, function() {
+        var switchModal = $("#desktop-modal");
+        if (switchModal.length > 0) {
+          $("#desktop-modal").modal("show");
+        }
+      });
 
     // Calling functions here
     adjustViewport();
@@ -242,7 +248,7 @@
       commentsLoaded = true;
       $.ajax({
         type: "GET",
-        url: "/comment_list",
+        url: "/comment_list?page=" + commentPage,
         dataType: "json",
         success: function(data) {
           if (data.success) {
@@ -260,6 +266,8 @@
                 $(".tab-content").append(obj.html());
               });
               $("#rsvp-list").removeClass("hidden");
+              commentsLoaded = false;
+              commentPage++;
             }
           }
         }

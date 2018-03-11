@@ -52,13 +52,16 @@ app.use(express.static(path.join(__dirname, "public")));
 
 const basicAuthChecker = () => {
   return basicAuth({
-    users: { aditya: "bonotono" },
+    users: {
+      [process.env.BASIC_USER]: [process.env.BASIC_PASS]
+    },
     challenge: true,
-    realm: "KkiUgKFKYr65UE^$5(IOh"
+    realm: process.env.BASIC_REALM
   });
 };
 
 app.get("/", HomeController.index);
+app.get("/pc", HomeController.index_desktop);
 
 app.post("/comment", RsvpController.index);
 app.get("/comment_list", RsvpController.listJSON);
