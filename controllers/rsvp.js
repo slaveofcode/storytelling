@@ -2,13 +2,16 @@ const crypto = require("crypto");
 const moment = require("moment");
 const Rsvp = require("../models/Rsvp");
 const nodemailer = require("nodemailer");
-const transporter = nodemailer.createTransport({
-  service: "Mailgun",
+const mg = require("nodemailer-mailgun-transport");
+
+const auth = {
   auth: {
-    user: process.env.MAILGUN_USERNAME,
-    pass: process.env.MAILGUN_PASSWORD
+    api_key: process.env.MAILGUN_SECRET,
+    domain: process.env.MAILGUN_DOMAIN
   }
-});
+};
+
+const transporter = nodemailer.createTransport(mg(auth));
 
 exports.index = (req, res) => {
   req.assert("name", "Nama tidak boleh kosong").notEmpty();
@@ -38,16 +41,24 @@ exports.index = (req, res) => {
         to: process.env.MAIL_TO,
         subject: "New Message Submitted",
         text: `
-          New message was submitted!
+          New message was submitted, please check the data below!
 
           Let's check into http://adityameliawedding.com/rsvp/detail/${rsvp.id}
 
-          name: ${rsvp.name}
-          email: ${rsvp.email}
-          words: ${rsvp.words}
+          from: ${rsvp.get("name")}
+          email: ${rsvp.get("email")}
+          message:
+
+          ${rsvp.get("words")}
         `
       };
-      transporter.sendMail(mailOptions);
+      transporter.sendMail(mailOptions, (err, info) => {
+        if (err) {
+          console.log("Error: " + err + process.env.MAILGUN_DOMAIN);
+        } else {
+          console.log("Response: " + info);
+        }
+      });
 
       res.json({
         response: "success"
