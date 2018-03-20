@@ -61,7 +61,6 @@ const basicAuthChecker = () => {
 };
 
 app.get("/", HomeController.index);
-app.get("/pc", HomeController.index_desktop);
 
 app.post("/comment", RsvpController.index);
 app.get("/comment_list", RsvpController.listJSON);

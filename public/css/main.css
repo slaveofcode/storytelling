@@ -1699,6 +1699,10 @@ a:focus {
     text-align: left;
     margin-bottom: 0;
   }
+  #colophon .footer-bottom .site-quote-survey {
+    text-align: right;
+    margin-right: 20px;
+  }
 }
 #colophon .widget {
   color: rgba(255, 255, 255, 0.8);
@@ -1826,7 +1830,7 @@ a:focus {
   }
 }
 .main-carousel .slide-inner {
-  width: 70%;
+  width: 80%;
   padding: 0 15px;
   max-width: 1200px;
   margin: 0 auto;
@@ -1900,7 +1904,8 @@ a:focus {
     background-position: 70% bottom;
   }
   .main-carousel .slide-title {
-    display: none;
+    font-size: 35px;
+    margin-bottom: 10px;
   }
   .navbar-collapse.in {
     border-radius: 5px;
@@ -2064,6 +2069,7 @@ a:focus {
     margin: 0 auto;
     margin-bottom: 5px;
     background-size: 654px auto;
+    background-position: center;
   }
   /* .wedding-bio-wrapper:after {
     content: '';
@@ -3939,4 +3945,10 @@ RSVP list
 .embed-responsive { margin-bottom: 20px; }
 .tab-content {
   padding: 50px 15px;
+}
+
+.events-reminder-date-address > a:link,
+.events-reminder-date-address > a:visited,
+.events-reminder-date-address > a:hover {
+  color: #FFFFFF;
 }

@@ -1,16 +1,7 @@
 #rsvp.section.section-contact.bg-cover.with-dark-bg(style='background-image: url(img/contact-bg.jpg);')
   .container
-    // Section Title
     .title-section-wrapper
-      // Title
-      h2.title-section YOUR BEST WORDS
-      // /title
-      // Text
-      //- p.text-section
-        //- | Come and celebrate with us! Please complete the form below and confirm your presence
-      // /text
-    // /Section Title
-    // Form
+      h2.title-section YOUR WISHES
     form#contactForm.form.row.rsvp(action="/rsvp", method="post")
       .col-sm-6.form-group
         label Name     
@@ -19,7 +10,7 @@
         label Email    
         input#email.form-control.required(name='email', required='', type='email')
       .col-sm-12.form-group
-        label Your Best Words 
+        label Message
         textarea#message.form-control.required(name='message', required='')
       .col-sm-12.form-group
         button.primary-btn.with-bg(type='submit') SEND
