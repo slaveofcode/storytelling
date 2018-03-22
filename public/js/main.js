@@ -28,10 +28,10 @@
     $("#page-loader")
       .delay(2000)
       .fadeOut(400, function() {
-        var switchModal = $("#desktop-modal");
-        if (switchModal.length > 0) {
-          $("#desktop-modal").modal("show");
-        }
+        //     var switchModal = $("#desktop-modal");
+        //     if (switchModal.length > 0) {
+        //       $("#desktop-modal").modal("show");
+        //     }
       });
 
     // Calling functions here
@@ -127,15 +127,15 @@
     //Hero Slider
     var mainSlider = $(".main-carousel");
 
-    mainSlider.on("initialized.owl.carousel", function(e) {
-      $(".slide-title").addClass("active");
-      $(".slide-icon").addClass("active");
-      $(".slide-text").addClass("active");
-      $(".featured-slide .primary-btn").addClass("active");
-      $(".main-carousel")
-        .removeClass("owl-loading")
-        .addClass("owl-loaded");
-    });
+    // mainSlider.on("initialized.owl.carousel", function(e) {
+    //   $(".slide-title").addClass("active");
+    //   $(".slide-icon").addClass("active");
+    //   $(".slide-text").addClass("active");
+    //   $(".featured-slide .primary-btn").addClass("active");
+    //   $(".main-carousel")
+    //     .removeClass("owl-loading")
+    //     .addClass("owl-loaded");
+    // });
 
     mainSlider.owlCarousel({
       items: 1,
@@ -143,21 +143,21 @@
       loop: false
     });
 
-    mainSlider.on("changed.owl.carousel", function(e) {
-      $(".slide-title").removeClass("active");
-      $(".slide-icon").removeClass("active");
-      $(".slide-text").removeClass("active");
-      $(".featured-slide .primary-btn").removeClass("active");
-      return false;
-    });
+    // mainSlider.on("changed.owl.carousel", function(e) {
+    //   $(".slide-title").removeClass("active");
+    //   $(".slide-icon").removeClass("active");
+    //   $(".slide-text").removeClass("active");
+    //   $(".featured-slide .primary-btn").removeClass("active");
+    //   return false;
+    // });
 
-    mainSlider.on("translated.owl.carousel", function(e) {
-      $(".slide-title").addClass("active");
-      $(".slide-icon").addClass("active");
-      $(".slide-text").addClass("active");
-      $(".featured-slide .primary-btn").addClass("active");
-      return false;
-    });
+    // mainSlider.on("translated.owl.carousel", function(e) {
+    //   $(".slide-title").addClass("active");
+    //   $(".slide-icon").addClass("active");
+    //   $(".slide-text").addClass("active");
+    //   $(".featured-slide .primary-btn").addClass("active");
+    //   return false;
+    // });
 
     //Contact Form
     //Form Validator and Ajax Sender
@@ -220,7 +220,7 @@
     });
 
     var sound = new Howl({
-      src: ["sound/river.webm", "sound/river.mp3"],
+      src: ["sound/river.mp3", "sound/river.webm"],
       autoplay: true,
       loop: true,
       volume: 0.6

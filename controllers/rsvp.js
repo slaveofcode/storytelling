@@ -36,9 +36,10 @@ exports.index = (req, res) => {
   })
     .save()
     .then(function(rsvp) {
+      const recipients = process.env.MAIL_TO.split(",");
       const mailOptions = {
         from: process.env.MAIL_FROM,
-        to: process.env.MAIL_TO,
+        to: recipients,
         subject: "New Message Submitted",
         text: `
           New message was submitted, please check the data below!
