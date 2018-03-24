@@ -10,7 +10,7 @@ html
     
     block preloads
       link(rel='preload', href='/vendor/bootstrap/dist/css/bootstrap.min.css', as='style')
-      link(rel='preload', href='/css/main.css', as='style')
+      link(rel='preload', href='/css/main.min.css', as='style')
       link(rel='preload', href='https://fonts.googleapis.com/css?family=Lato', as='style', crossorigin='anonymous')
       link(rel='preload', href='/vendor/font-awesome/fonts/fontawesome-webfont.eot', as='font', type='application/vnd.ms-fontobject', crossorigin='anonymous')
       link(rel='preload', href='/vendor/font-awesome/fonts/fontawesome-webfont.woff2', as='font', type='font/woff2', crossorigin='anonymous')
@@ -22,11 +22,10 @@ html
       link(rel='preload', href='/vendor/imagesloaded/imagesloaded.pkgd.min.js', as='script')
       link(rel='preload', href='/vendor/waypoints/lib/jquery.waypoints.min.js', as='script')
       link(rel='preload', href='/vendor/matchHeight/dist/jquery.matchHeight-min.js', as='script')
-      link(rel='preload', href='/js/cross-browser.js', as='script')
 
     block styles
       link(rel='stylesheet', href='/vendor/bootstrap/dist/css/bootstrap.min.css', type='text/css')
-      link(href='/css/main.css', rel='stylesheet')
+      link(href='/css/main.min.css', rel='stylesheet')
       link(rel='stylesheet', href='/vendor/font-awesome/css/font-awesome.min.css', type='text/css')
       link(href='https://fonts.googleapis.com/css?family=Great+Vibes', rel='stylesheet', type='text/css')
       link(href='https://fonts.googleapis.com/css?family=Lato', rel='stylesheet', type='text/css')
@@ -42,7 +41,7 @@ html
       script(src='/vendor/waypoints/lib/jquery.waypoints.min.js')
       script(src='/vendor/matchHeight/dist/jquery.matchHeight-min.js')
       script(src='/js/cross-browser.js')
-      script(src='/js/main.js')
+      script(src='/js/main.min.js')
 
     //if lt IE 9
       script(src='/vendor/html5shiv/dist/html5shiv.min.js')
