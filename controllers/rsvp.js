@@ -125,7 +125,7 @@ exports.listJSON = async (req, res) => {
           .digest("hex");
         rsvp.image = `https://www.gravatar.com/avatar/${gravatarHash}?s=100&d=mm`;
         rsvp.created_at = moment(rsvp.created_at).format("ddd Do MMM, hA");
-        rsvp.words = rsvp.words.replace(/\s/g, "<br/>");
+        rsvp.words = rsvp.words.replace(/(^|[^\n])\n{2}(?!\n)/g, "$1<br/>");
         return rsvp;
       });
     }
